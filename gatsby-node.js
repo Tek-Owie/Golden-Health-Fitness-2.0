@@ -14,6 +14,9 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
+              readingTime {
+                text
+              }
             }
             frontmatter {
               tags

@@ -64,6 +64,7 @@ export default function FullWidthImage(props) {
               // This centers the other elements inside the hero component
               placeItems: "center",
               display: "grid",
+              opacity: '0.5'
             }}
           >
             {/* Any content here will be centered in the component */}

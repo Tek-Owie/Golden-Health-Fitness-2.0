@@ -1,12 +1,13 @@
 import * as React from "react";
-
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
+import Seo from "../../components/SEO";
 
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
+        <Seo title='Blog' description='Golden Health & Fitness Blog'/>
         <div
           className="full-width-image-container margin-top-0"
           style={{
@@ -18,6 +19,7 @@ export default class BlogIndexPage extends React.Component {
             style={{
               boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
               backgroundColor: "#f40",
+              opacity: "0.5",
               color: "white",
               padding: "1rem",
             }}

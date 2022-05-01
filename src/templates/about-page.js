@@ -1,14 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import FullWidthImage from "../components/FullWidthImage";
+import Seo from "../components/SEO";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ 
+  title, 
+  content, 
+  contentComponent,
+  image,
+ }) => {
   const PageContent = contentComponent || Content;
+  const heroImage = getImage(image) || image;
+  // const fullWidthImage = getImage(fullImage) || fullImage;
 
   return (
+    <Fragment>
+    <FullWidthImage img={heroImage} title={title} />
     <section className="section section--gradient">
       <div className="container">
         <div className="columns">
@@ -23,10 +35,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
+    </Fragment>
   );
 };
 
 AboutPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -37,7 +51,9 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title='About Us' description='About Golden Health & Fitness'/>
       <AboutPageTemplate
+        image={post.frontmatter.image}
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -58,6 +74,11 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
   }

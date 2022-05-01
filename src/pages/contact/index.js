@@ -1,10 +1,12 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
+import "../../components/all.sass";
+import Seo from "../../components/SEO";
 
 function encode(data) {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 }
 
@@ -36,10 +38,18 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Seo title='Contact Us' description='Contact page of Golden Health & Fitness'/>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>Contact Us</h1>
+              <h2>Wanna get in touch?</h2>
+              <p>Drop a DM on <a title="whatsapp" target= "_blank" rel="noreferrer" 
+                href="https://api.whatsapp.com/send?phone=2348119094844&text=Hi,%20I'm%20interested%20in%20Golden%20Health%20and%20Fitness">WhatsApp </a>
+                 Or  
+                <a title="instagram" target= "_blank" rel="noreferrer" href="https://instagram.com/gh_fitnessworld/"> IG</a>              
+              </p>
+                <p>Alternatively, fill this form and we'll get back to you!</p>
               <form
                 name="contact"
                 method="post"
@@ -47,6 +57,7 @@ export default class Index extends React.Component {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
+                className="form"
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
@@ -68,6 +79,7 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"name"}
                       required={true}
+                      placeholder={"Walter White"}
                     />
                   </div>
                 </div>
@@ -83,6 +95,7 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"email"}
                       required={true}
+                      placeholder={"abc@xyz.com"}
                     />
                   </div>
                 </div>
@@ -97,12 +110,13 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"message"}
                       required={true}
+                      placeholder={"How may we be of service?"}
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
-                    Send
+                  <button className="button is-link" type="submit" style={{width: '100%'}}>
+                    Submit
                   </button>
                 </div>
               </form>

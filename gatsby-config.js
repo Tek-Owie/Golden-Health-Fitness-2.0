@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "Golden Health & Fitness",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "Kickstart your journey to fitness and physical pride with this easy-to-follow guide. We'll be your companion & guide on your journey to fitness.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -37,12 +37,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `dominantColor`,
+          quality: 100,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          `gatsby-remark-reading-time`,
           {
             resolve: "gatsby-remark-relative-images",
             options: {
@@ -80,6 +89,30 @@ module.exports = {
         purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Golden Health & Fitness`,
+        short_name: `GHF`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `static/img/logo.svg`,
+        cache_busting_mode: `none`,
+        theme_color_in_head: false,
+        include_favicon: false,
+        legacy: false
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          globPatterns: ['static/img/logo.svg']
+        }
+      }
+    },
     "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 };

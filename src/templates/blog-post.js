@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Seo from '../components/SEO';
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -12,8 +13,10 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  readingTime,
   title,
   helmet,
+  date,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -26,7 +29,9 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+            <p>{date}</p>
+            <p>{readingTime}</p>
+            <p style={{fontStyle: "italic"}}>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -52,6 +57,8 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  readingTime: PropTypes.string,
+  date: PropTypes.string,
   helmet: PropTypes.object,
 };
 
@@ -60,10 +67,13 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={post.frontmatter.title} description={post.frontmatter.description}/>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        date={post.frontmatter.date}
+        readingTime={post.fields.readingTime.text}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -94,10 +104,15 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "dddd,  Do MMM, YYYY")
         title
         description
         tags
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }

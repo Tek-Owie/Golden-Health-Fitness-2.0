@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
+import "../components/all.sass";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import Seo from "../components/SEO";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -22,7 +24,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <FullWidthImage img={heroImage} title={title} subheading={subheading} style={{opacity: '0.2'}} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -30,9 +32,6 @@ export const IndexPageTemplate = ({
               <div className="column is-10 is-offset-1">
                 <div className="content">
                   <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
                     <div className="tile">
                       <h3 className="subtitle">{mainpitch.description}</h3>
                     </div>
@@ -48,8 +47,8 @@ export const IndexPageTemplate = ({
                   <Features gridItems={intro.blurbs} />
                   <div className="columns">
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
+                      <Link className="btn" to="/merch">
+                        See all merchandise
                       </Link>
                     </div>
                   </div>
@@ -91,6 +90,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title='Home' description='Home page of Golden Health & Fitness'/>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -127,7 +127,6 @@ export const pageQuery = graphql`
         heading
         subheading
         mainpitch {
-          title
           description
         }
         description

@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Seo from "../components/SEO";
 
 class TagRoute extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
+        <Seo title='Tags'/>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">

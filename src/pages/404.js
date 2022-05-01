@@ -1,12 +1,18 @@
 import * as React from "react";
+import {Link} from 'gatsby';
 import Layout from "../components/Layout";
+import Seo from '../components/SEO';
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
+    <Seo title='Error'/>
+    <main className='error-page'>
+      <section>
+        <h1>404</h1>
+        <h3>Page not found</h3>
+        <p>Go to the <Link to='/'>Home Page</Link></p>
+      </section>
+    </main>
   </Layout>
 );
 
