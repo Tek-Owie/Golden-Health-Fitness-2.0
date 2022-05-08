@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Tek-Owie/Golden-Health-Fitness-2.0
   branch: master
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
