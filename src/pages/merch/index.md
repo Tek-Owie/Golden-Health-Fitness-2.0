@@ -1,47 +1,34 @@
 ---
-heading: Great coffee with a conscience
+heading: Fitness Apparels for you
 path: /merch
 templateKey: merch-page
 title: Our Merch
+image: /img/camo-merch-1-.jpg
 description: GHF provides quality and comfortable apparels for fitness
   enthusiasts of all stages, whether you're a beginner or seasoned pro, we've
   got something for your needs.
-image: /img/camo-merch-1-.jpg
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/blue-tight.jpg
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+        Ladies, not a fan of legging pants? Check out this set of blue top and
+        short leggings. We can customize the set to suit whatever colour you
+        desire.
+    - image: /img/blue-short.jpg
+      text: We believe in comfort, therefore, we offer a wide variety of shorts and
+        pants to choose from, including this one for the men.
+    - image: /img/black-tank-top.jpg
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
+        More on the list for men are tank tops, with deep or shallow cutouts to
+        ensure enough breathing room for those large biceps.
+    - image: /img/black-short-and-top.jpg
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        Need something casual for a walk or sports activity? We've got you
+        covered with this.
   heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  description: GHF provides quality and comfortable apparels for fitness
+    enthusiasts, whether you're a beginner or seasoned pro, we've got something
+    for your needs.
 main:
   heading: Great coffee with no compromises
   description: >
@@ -59,39 +46,22 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: Kaldi is the place to go if you want the best quality coffee. I love
-      their stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+  - author: Owie
+    quote: At first I thought your products were just overhyped, then my friend kept
+      singing your praises after patronizing you. So I decided to give you a
+      try, I'm so glad I did. You've saved me from placing orders from foreign
+      vendors and waiting months for delivery. I never found such remarkable
+      quality for fitness wears in a long time! Keep doing what you do GHF!!
+  - author: Ade
+    quote: I love your products, especially the grey hoodie you made for me. Now
+      everyone who sees it with my name on the back just asks me for your
+      number. I've become your ambassador for life.
+full_image: /img/fitness-trainer.jpg
 pricing:
-  heading: Monthly subscriptions
-  description: We make it easy to make great coffee a part of your life. Choose
-    one of our monthly subscription plans to receive great coffee at your
-    doorstep each month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: "50"
-    - description: Great for avid drinkers, java-loving couples and bigger crowds
-      items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: "80"
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: ??
+  heading: Fitness Training Subscriptions
+  description: We make it easy to make fitness a part of your life. Choose one of
+    our monthly subscription plans to receive intense and comprehensive training
+    each month. Contact us about more details and payment info.
+  plans: []
 ---
 GHF provides quality and comfortable apparels for fitness enthusiasts of all stages, whether you're a beginner or seasoned pro, we've got something for your needs.
