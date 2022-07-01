@@ -30,21 +30,21 @@ intro:
     enthusiasts, whether you're a beginner or seasoned pro, we've got something
     for your needs.
 main:
-  heading: Great coffee with no compromises
+  heading: Customizable, comfortable, quality
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    We hold our products to the highest standards, from the sourcing materials
+    to the end-product. That’s why we’re meticulous and confident about the
+    outcome. We personally inspect each fabric to make sure the conditions,
+    texture, and thickness are optimal for your needs.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: two ladies in GHF-branded apparels
+    image: /img/two-ladies-in-ghf-apparels.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    alt: a lady standing in blue GHF apparel
+    image: /img/a-lady-in-blue-tights.jpg
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: a man in GHF branded hoodie
+    image: /img/a-man-in-ghf-branded-hoodies.jpg
 testimonials:
   - author: Owie
     quote: At first I thought your products were just overhyped, then my friend kept
