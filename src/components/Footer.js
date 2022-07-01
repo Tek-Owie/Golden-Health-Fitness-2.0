@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import Main from "../img/Main.png";
 import instagram from "../img/social/instagram.svg";
-import twitter from "../img/social/twitter.svg";
+import facebook from "../img/social/facebook.svg";
 import whatsapp from "../img/social/whatsapp.svg";
 
 const Footer = class extends React.Component {
@@ -67,11 +67,11 @@ const Footer = class extends React.Component {
                     style={{ width: "1em", height: "1em" }}
                   />
                 </a>
-                <a title="twitter" target= "_blank" rel="noreferrer" href="https://twitter.com">
+                <a title="facebook" target= "_blank" rel="noreferrer" href="https://www.facebook.com/Golden-Health-Fitness-100386248882137">
                   <img
                     className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
+                    src={facebook}
+                    alt="Facebook logo"
                     style={{ width: "1em", 
                     height: "1em" }}
                   />
