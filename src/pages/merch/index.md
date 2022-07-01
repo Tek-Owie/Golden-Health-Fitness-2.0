@@ -62,6 +62,11 @@ pricing:
   description: We make it easy to make fitness a part of your life. Choose one of
     our monthly subscription plans to receive intense and comprehensive training
     each month. Contact us about more details and payment info.
-  plans: []
+  plans:
+    - plan: Starter
+      price: "0"
+      description: Perfect plan for beginners who are starting their fitness journey
+      items:
+        - nutrition plan
 ---
 GHF provides quality and comfortable apparels for fitness enthusiasts of all stages, whether you're a beginner or seasoned pro, we've got something for your needs.
